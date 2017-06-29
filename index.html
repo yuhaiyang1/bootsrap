@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//媒体查询-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--兼容ie8以下版本-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../bootsrap/js/jquery-1.11.2.js"></script>
+    <script src="../../bootsrap/js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+    <style>
+    *{
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .navbar {
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 0;
+      border: 0;
+
+    }
+    .navbar-default {
+      background-color: #ef417b;
+
+    }
+    .navbar-default .navbar-brand {
+      color: #FFFFFF;
+    }
+    .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus {
+      color: #F0F0F0;
+      background-color: transparent;
+    }
+    .navbar-default .navbar-nav> li > a {
+
+      color: white;
+      height: 50px;
+      padding: 20px 35px;
+      line-height: 15px;
+      text-align: center;
+
+
+    }
+    .navbar-default .navbar-nav> li >a:hover,
+    .navbar-default .navbar-nav> li >a:focus {
+      color: #F0F0F0;
+      background-color: brown;
+    }
+    .navbar-default .navbar-nav> .active > a,
+    .navbar-default .navbar-nav> .active >a:hover,
+    .navbar-default .navbar-nav> .active >a:focus {
+      color: #FFFFFF;
+      background-color:brown;
+    }
+    .navbar-default .navbar-nav> .disabled > a,
+    .navbar-default .navbar-nav> .disabled >a:hover,
+    .navbar-default .navbar-nav> .disabled >a:focus {
+      color: #ccc;
+      background-color: transparent;
+    }
+    .navbar-brand {
+      float: left;
+      height: 70px;
+      padding: 30px 50px;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+      text-decoration: none;
+    }
+    .navbar > div:last-child {
+      border-top: 0 none;
+    }
+    @media (min-width: 768px) {
+      .navbar > div:last-child > ul {
+        width: 100%;
+      }
+      .navbar > div:last-child > ul > li {
+        width: 12.5%;
+        font-size: 105%;
+
+      }
+      .navbar > div:last-child > ul > li > a {
+        padding: 20px 15px;
+        /*font-size: 80%;*/
+      }
+    }
+    #btn{
+
+      text-align: center;
+    margin-right: 80px;
+    }
+    #jumbotron{
+      position: relative;
+
+      top:-80px;
+      z-index: 1;
+      opacity: 0.7;
+      width: 30%;
+      height: 50px;
+      line-height: 20px;
+      text-align: center;
+      color: #0f0f0f;
+      background-color: white;
+      letter-spacing: 2px;
+      font-size: 50%;
+    }
+    #kk{
+      margin: 0 auto;
+    }
+    #myModal{
+      background-color: #c0a16b;
+    }
+    #myModal .modal-content{
+      background-color:#fffa8a;
+    }
+    #myModal h1{
+      text-align: center;
+      font-size: 50px;
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+    #myModal tr:nth-child(1){
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 50px;
+    }
+    #myModal tr:nth-child(1) strong{
+       color: deeppink;
+       font-weight: 900;
+
+     }
+    #myModal tr:nth-child(2) {
+      color:black;
+      font-size: 9px;
+      text-align: center;
+      line-height: 50px;
+
+
+    }
+    #myModal tr:nth-child(3) {
+      color:black;
+      font-size: 15px;
+      text-align: center;
+      line-height: 50px;
+
+
+    }
+    #myModal tr:nth-child(4) {
+      color:black;
+      font-size: 15px;
+      text-align: center;
+      line-height: 50px;
+
+
+    }
+    #myModal tr:nth-child(5) {
+      color:black;
+      font-size: 15px;
+      text-align: center;
+      line-height: 50px;
+
+
+    }
+    .descride{
+      margin-top: 20px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      line-height: 50px;
+    }
+    #skill{
+      background-color:#5ebdff;
+    }
+    #skill .modal-content{
+       background-color:black;
+      color: white;
+     }
+    #experience{
+      background-color: #5ebdff;
+    }
+
+
+    #experience .row{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    .first{
+
+      height: 150px;
+      border: 1px solid #EC407A;
+      background-color: #EC407A;
+
+    }
+    .first1{
+
+      height: 250px;
+      border: 1px solid #EC407A;
+
+    }
+    #education{
+      background-color:#5ebdff;
+    }
+    #education .modal-content{
+
+      color: white;
+    }
+    #education .row{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    .first{
+
+      height: 150px;
+      border: 1px solid #EC407A;
+
+
+    }
+    .first1{
+
+      height: 250px;
+      border: 2px solid #EC407A;
+
+
+    }
+    #work{
+      background-color:#fffa8a;
+    }
+    #content{
+      background-color:#5ebdff;
+    }
+    #content .modal-content{
+      background-color:#fffa8a;
+    }
+    #bigimg{
+      background-color: #EC407A;
+    }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- <nav class="navbar navbar-default" style="font-size:20px;"> -->
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+            <button id="btn" class="navbar-toggle " type="button" data-toggle="collapse" data-target="#kk">
+                <span>Menu</span>
+
+            </button>
+            <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+
+        </div>
+
+        <div class="collapse navbar-collapse navbar-responsive-collapse clearfix" id="kk">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="##">Home</a></li>
+                <li data-toggle="modal"
+                    data-target="#myModal"><a href="#myModal">About</a></li>
+                <li data-toggle="modal"
+                    data-target="#skill"><a href="#skill">Skills</a></li>
+                <li data-toggle="modal"
+                    data-target="#experience"><a href="#experience">Experience</a></li>
+                <li data-toggle="modal"
+                    data-target="#education"><a href="#education">Education</a></li>
+                <li data-toggle="modal"
+                    data-target="#work"><a href="#work">Work</a></li>
+
+                <li data-toggle="modal"
+                    data-target="#content"><a href="#content">Content</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-download-alt "></i> </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- </nav> -->
+    <div class="img img-responsive">
+
+        <img src="../image/1.jpg" width="100%"/>
+        <div id="jumbotron">
+            <p>余海洋</p>
+            <p>webDesign</p>
+        </div>
+    </div>
+
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade " id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body">
+
+                    <h1>About&nbsp;Me</h1>
+                    <div class="row">
+
+                        <div class="col-lg-4"><img src="../image/2.jpg" class=" img-circle img-responsive" id="left"
+                                                   width="100%"></div>
+                        <div class="col-lg-8">
+                            <table class="table-striped  table-responsive" id="right" width="80%">
+                                <tr class="">
+                                    <td colspan="2">你好，我是<strong>余海洋</strong></td>
+                                </tr>
+                                <tr class="">
+                                    <td colspan="2">Web Designer & Develope</td>
+                                </tr>
+                                <tr class="text-success">
+                                    <td>出生日期</td>
+                                    <td>1995.9.18</td>
+                                </tr>
+                                <tr class="">
+                                    <td>联系电话</td>
+                                    <td>18771350464</td>
+                                </tr>
+                                <tr class="">
+                                    <td>联系邮箱</td>
+                                    <td>18771350464@163.com</td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="descride">个人描述：Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        laoreet sem sit amet dolor luctus pellentesque. Pellentesque eleifend tellus at interdum
+                        elementum. Nam egestas molestie elit. Vivamus sed accumsan quam, a mollis magna. Nam aliquet
+                        eros eget sapien consequat tincidunt at vel nibh sed accumsan quam.
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+
+    <!--skill-->
+
+    <div class="modal fade " id="skill" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">My Skills</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4 class="glyphicon glyphicon-cog">专业技能</h4>
+                            <h6>Html/Css <span> 80% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+
+                            <h6>Javascript<span> 70% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-info" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+
+                            <h6>Jquery<span> 70% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-warning" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%"
+                                     id="">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+
+                            <h6>Bootstrap等其他插件<span> 80% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-danger" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%"
+                                     >
+                                    <span>80%</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                            <h4 class="glyphicon glyphicon-briefcase">生活</h4>
+                            <h6>学习能力 <span> 90% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+
+                            <h6>沟通交流<span> 70% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-info" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+
+                            <h6>适应能力<span> 80% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-warning" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+
+                            <h6>吃苦耐劳<span> 80% </span></h6>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-danger" role="progressbar"
+                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+    <!--工作经验-->
+    <div class="modal fade " id="experience" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+
+    </div>
+
+    <!--education-->
+
+    <div class="modal fade " id="education" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+
+    </div>
+    <!--worK-->
+    <div class="modal fade " id="work" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body" >
+                    <div class="row" id="row">
+                        <div class="col-lg-4" data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/1.jpg" class="img img-responsive img-rounded "></div>
+                        <div class="col-lg-4 " data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/2.jpg" class="img img-responsive img-rounded"></div>
+                        <div class="col-lg-4 " data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/3.jpg" class="img img-responsive img-rounded"></div>
+
+
+
+                        <div class="col-lg-4" data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g4.jpg" class="img img-responsive img-rounded"></div>
+                        <div class="col-lg-4" data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g5.jpg" class="img img-responsive img-rounded"></div>
+                        <div class="col-lg-4"data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g6.jpg" class="img img-responsive img-rounded"></div>
+
+
+
+                        <div class="col-lg-4"data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g1.jpg" class="img img-responsive img-rounded"></div>
+                        <div class="col-lg-4"data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g2.jpg" class="img img-responsive img-rounded"></div>
+                        <div class="col-lg-4"data-toggle="modal"
+                             data-target="#bigimg"><img src="../image/g3.jpg" class="img img-responsive img-rounded"></div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade " id="bigimg" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+
+                </div>
+                <div class="modal-body">
+                    <div id="big"></div>
+                    <a class="left carousel-control" href="#big" >
+                        <span class="glyphicon glyphicon-chevron-left" id="prv"></span></a>
+                    <a class="right carousel-control" href="#big" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" id="next"></span></a>
+                    <p id="p"></p>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade " id="content" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 first ">
+                            <div></div>
+                        </div>
+                        <div class="col-lg-8  first1">
+                            <div></div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
